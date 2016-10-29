@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using MaterialSkin;
 
 namespace CadastroDeFuncionarios
 {
@@ -17,6 +18,10 @@ namespace CadastroDeFuncionarios
         public Form1()
         {
             InitializeComponent();
+            var skinManager = MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new ColorScheme(Primary.Grey900, Primary.Grey700, Primary.Indigo100, Accent.Amber700, TextShade.WHITE);
         }
 
         private void Form1_Load(object sender, EventArgs e)
