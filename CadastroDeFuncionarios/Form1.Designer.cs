@@ -31,26 +31,22 @@
             this.inputNomeFuncionario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.inputEndereco = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnCadastrar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnApagar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnAbrirArquivo = new MaterialSkin.Controls.MaterialFlatButton();
             this.inputEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.inputProfissao = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.inputSalario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.inputTelefone = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.radioSolteiro = new MaterialSkin.Controls.MaterialRadioButton();
-            this.radioCasado = new MaterialSkin.Controls.MaterialRadioButton();
-            this.radioNoivo = new MaterialSkin.Controls.MaterialRadioButton();
             this.inputTelefoneEmergencia = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.inputNumeroEndereco = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.radioViuvo = new MaterialSkin.Controls.MaterialRadioButton();
+            this.btnMostrarFuncionarios = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // inputNomeFuncionario
             // 
             this.inputNomeFuncionario.BackColor = System.Drawing.Color.White;
             this.inputNomeFuncionario.Depth = 0;
+            this.inputNomeFuncionario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.inputNomeFuncionario.Hint = "Nome funcionário";
             this.inputNomeFuncionario.Location = new System.Drawing.Point(12, 124);
             this.inputNomeFuncionario.MouseState = MaterialSkin.MouseState.HOVER;
@@ -87,7 +83,7 @@
             this.btnCadastrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCadastrar.Depth = 0;
-            this.btnCadastrar.Location = new System.Drawing.Point(1075, 479);
+            this.btnCadastrar.Location = new System.Drawing.Point(764, 325);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCadastrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCadastrar.Name = "btnCadastrar";
@@ -98,39 +94,23 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // materialFlatButton2
+            // btnAbrirArquivo
             // 
-            this.materialFlatButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.BackColor = System.Drawing.SystemColors.Control;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Location = new System.Drawing.Point(950, 479);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(117, 36);
-            this.materialFlatButton2.TabIndex = 2;
-            this.materialFlatButton2.Text = "Novo registro";
-            this.materialFlatButton2.UseVisualStyleBackColor = false;
-            // 
-            // btnApagar
-            // 
-            this.btnApagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnApagar.AutoSize = true;
-            this.btnApagar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnApagar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.btnApagar.Depth = 0;
-            this.btnApagar.Location = new System.Drawing.Point(876, 479);
-            this.btnApagar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnApagar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Primary = false;
-            this.btnApagar.Size = new System.Drawing.Size(66, 36);
-            this.btnApagar.TabIndex = 3;
-            this.btnApagar.Text = "APAGAR";
-            this.btnApagar.UseVisualStyleBackColor = false;
+            this.btnAbrirArquivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAbrirArquivo.AutoSize = true;
+            this.btnAbrirArquivo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAbrirArquivo.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnAbrirArquivo.Depth = 0;
+            this.btnAbrirArquivo.Location = new System.Drawing.Point(643, 325);
+            this.btnAbrirArquivo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAbrirArquivo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAbrirArquivo.Name = "btnAbrirArquivo";
+            this.btnAbrirArquivo.Primary = false;
+            this.btnAbrirArquivo.Size = new System.Drawing.Size(113, 36);
+            this.btnAbrirArquivo.TabIndex = 3;
+            this.btnAbrirArquivo.Text = "ABRIR ARQUIVO";
+            this.btnAbrirArquivo.UseVisualStyleBackColor = false;
+            this.btnAbrirArquivo.Click += new System.EventHandler(this.btnAbrirArquivo_Click);
             // 
             // inputEmail
             // 
@@ -206,60 +186,6 @@
             this.inputTelefone.UseSystemPasswordChar = false;
             this.inputTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputNumeroEndereco_KeyPress);
             // 
-            // radioSolteiro
-            // 
-            this.radioSolteiro.AutoSize = true;
-            this.radioSolteiro.BackColor = System.Drawing.Color.White;
-            this.radioSolteiro.Depth = 0;
-            this.radioSolteiro.Font = new System.Drawing.Font("Roboto", 10F);
-            this.radioSolteiro.Location = new System.Drawing.Point(9, 335);
-            this.radioSolteiro.Margin = new System.Windows.Forms.Padding(0);
-            this.radioSolteiro.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioSolteiro.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioSolteiro.Name = "radioSolteiro";
-            this.radioSolteiro.Ripple = true;
-            this.radioSolteiro.Size = new System.Drawing.Size(77, 30);
-            this.radioSolteiro.TabIndex = 20;
-            this.radioSolteiro.TabStop = true;
-            this.radioSolteiro.Text = "Solteiro";
-            this.radioSolteiro.UseVisualStyleBackColor = false;
-            // 
-            // radioCasado
-            // 
-            this.radioCasado.AutoSize = true;
-            this.radioCasado.BackColor = System.Drawing.Color.White;
-            this.radioCasado.Depth = 0;
-            this.radioCasado.Font = new System.Drawing.Font("Roboto", 10F);
-            this.radioCasado.Location = new System.Drawing.Point(98, 335);
-            this.radioCasado.Margin = new System.Windows.Forms.Padding(0);
-            this.radioCasado.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioCasado.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioCasado.Name = "radioCasado";
-            this.radioCasado.Ripple = true;
-            this.radioCasado.Size = new System.Drawing.Size(75, 30);
-            this.radioCasado.TabIndex = 21;
-            this.radioCasado.TabStop = true;
-            this.radioCasado.Text = "Casado";
-            this.radioCasado.UseVisualStyleBackColor = false;
-            // 
-            // radioNoivo
-            // 
-            this.radioNoivo.AutoSize = true;
-            this.radioNoivo.BackColor = System.Drawing.Color.White;
-            this.radioNoivo.Depth = 0;
-            this.radioNoivo.Font = new System.Drawing.Font("Roboto", 10F);
-            this.radioNoivo.Location = new System.Drawing.Point(193, 335);
-            this.radioNoivo.Margin = new System.Windows.Forms.Padding(0);
-            this.radioNoivo.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioNoivo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioNoivo.Name = "radioNoivo";
-            this.radioNoivo.Ripple = true;
-            this.radioNoivo.Size = new System.Drawing.Size(65, 30);
-            this.radioNoivo.TabIndex = 22;
-            this.radioNoivo.TabStop = true;
-            this.radioNoivo.Text = "Noivo";
-            this.radioNoivo.UseVisualStyleBackColor = false;
-            // 
             // inputTelefoneEmergencia
             // 
             this.inputTelefoneEmergencia.BackColor = System.Drawing.Color.White;
@@ -279,26 +205,13 @@
             this.inputTelefoneEmergencia.UseSystemPasswordChar = false;
             this.inputTelefoneEmergencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputNumeroEndereco_KeyPress);
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(126, 305);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(118, 19);
-            this.materialLabel1.TabIndex = 24;
-            this.materialLabel1.Text = "Relacionamento";
-            // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(81, 91);
+            this.materialLabel2.Location = new System.Drawing.Point(114, 82);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(177, 19);
@@ -323,48 +236,46 @@
             this.inputNumeroEndereco.UseSystemPasswordChar = false;
             this.inputNumeroEndereco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputNumeroEndereco_KeyPress);
             // 
-            // radioViuvo
+            // btnMostrarFuncionarios
             // 
-            this.radioViuvo.AutoSize = true;
-            this.radioViuvo.BackColor = System.Drawing.Color.White;
-            this.radioViuvo.Depth = 0;
-            this.radioViuvo.Font = new System.Drawing.Font("Roboto", 10F);
-            this.radioViuvo.Location = new System.Drawing.Point(283, 335);
-            this.radioViuvo.Margin = new System.Windows.Forms.Padding(0);
-            this.radioViuvo.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.radioViuvo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.radioViuvo.Name = "radioViuvo";
-            this.radioViuvo.Ripple = true;
-            this.radioViuvo.Size = new System.Drawing.Size(64, 30);
-            this.radioViuvo.TabIndex = 27;
-            this.radioViuvo.TabStop = true;
-            this.radioViuvo.Text = "Viuvo";
-            this.radioViuvo.UseVisualStyleBackColor = false;
+            this.btnMostrarFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMostrarFuncionarios.AutoSize = true;
+            this.btnMostrarFuncionarios.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMostrarFuncionarios.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnMostrarFuncionarios.Depth = 0;
+            this.btnMostrarFuncionarios.Location = new System.Drawing.Point(458, 325);
+            this.btnMostrarFuncionarios.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnMostrarFuncionarios.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMostrarFuncionarios.Name = "btnMostrarFuncionarios";
+            this.btnMostrarFuncionarios.Primary = false;
+            this.btnMostrarFuncionarios.Size = new System.Drawing.Size(177, 36);
+            this.btnMostrarFuncionarios.TabIndex = 28;
+            this.btnMostrarFuncionarios.Text = "MOSTRAR FUNCIONARIOS";
+            this.btnMostrarFuncionarios.UseVisualStyleBackColor = false;
+            this.btnMostrarFuncionarios.Click += new System.EventHandler(this.btnMostrarFuncionarios_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1179, 530);
-            this.Controls.Add(this.radioViuvo);
+            this.ClientSize = new System.Drawing.Size(868, 376);
+            this.Controls.Add(this.btnMostrarFuncionarios);
             this.Controls.Add(this.inputNumeroEndereco);
             this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.inputTelefoneEmergencia);
-            this.Controls.Add(this.radioNoivo);
-            this.Controls.Add(this.radioCasado);
-            this.Controls.Add(this.radioSolteiro);
             this.Controls.Add(this.inputTelefone);
             this.Controls.Add(this.inputSalario);
             this.Controls.Add(this.inputProfissao);
             this.Controls.Add(this.inputEmail);
             this.Controls.Add(this.inputEndereco);
             this.Controls.Add(this.inputNomeFuncionario);
-            this.Controls.Add(this.btnApagar);
-            this.Controls.Add(this.materialFlatButton2);
+            this.Controls.Add(this.btnAbrirArquivo);
             this.Controls.Add(this.btnCadastrar);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.Sizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Funcionários";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -376,20 +287,15 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField inputNomeFuncionario;
         private MaterialSkin.Controls.MaterialSingleLineTextField inputEndereco;
         private MaterialSkin.Controls.MaterialFlatButton btnCadastrar;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
-        private MaterialSkin.Controls.MaterialFlatButton btnApagar;
+        private MaterialSkin.Controls.MaterialFlatButton btnAbrirArquivo;
         private MaterialSkin.Controls.MaterialSingleLineTextField inputEmail;
         private MaterialSkin.Controls.MaterialSingleLineTextField inputProfissao;
         private MaterialSkin.Controls.MaterialSingleLineTextField inputSalario;
         private MaterialSkin.Controls.MaterialSingleLineTextField inputTelefone;
-        private MaterialSkin.Controls.MaterialRadioButton radioSolteiro;
-        private MaterialSkin.Controls.MaterialRadioButton radioCasado;
-        private MaterialSkin.Controls.MaterialRadioButton radioNoivo;
         private MaterialSkin.Controls.MaterialSingleLineTextField inputTelefoneEmergencia;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialSingleLineTextField inputNumeroEndereco;
-        private MaterialSkin.Controls.MaterialRadioButton radioViuvo;
+        private MaterialSkin.Controls.MaterialFlatButton btnMostrarFuncionarios;
     }
 }
 
